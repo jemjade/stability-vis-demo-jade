@@ -410,7 +410,7 @@ with tab2:
                 df_debug.style.format({
                     "Signal": "{:.3f}", "w(I→M)": "{:.3f}",
                     "w(M→C)": "{:.3f}", "Contribution": "{:.4f}",
-                }).background_gradient(subset=["Contribution"], cmap="Greens"),
+                }),
                 use_container_width=True,
             )
 
