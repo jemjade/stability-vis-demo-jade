@@ -99,9 +99,10 @@ summ = summary_table(df)
 # HEADER
 # ══════════════════════════════════════════════════════════════════════════════
 st.title("🧠 Stability-Aware Adaptive Visualization Framework")
+
 st.markdown(
-    f"**HCII 2026 Poster Demo** · Suhyun Park · Korea University  \n"
-    f"Synthetic sessions: **N = {N_SESSIONS}** · Seed: {SEED} · ML accuracy: **~94%**"
+    f"**HCII 2026 Poster Demo** · Suhyun Park · Graduate School of SW and AI Convergence, Korea University  \n"
+    f"Synthetic sessions: **N = {N_SESSIONS}** · Seed: {SEED} · Preliminary ML consistency: **~94%**"
 )
 st.markdown("---")
 
