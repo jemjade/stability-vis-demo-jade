@@ -81,7 +81,7 @@ class KnowledgeGraphSimulator:
         for c in ["low", "high"]:
             self.G.add_node(f"C:{c}", ntype="C")
 
-        # ── M: fitness metric nodes ───────────────────────────────────────────
+        # ── M: observed metric nodes (interaction-derived / performance-related) ──
         for m in ["dwell_time", "click_rate", "filtering",
                   "backtracking", "efficiency", "comprehension"]:
             self.G.add_node(f"M:{m}", ntype="M")
