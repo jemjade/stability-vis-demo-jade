@@ -293,7 +293,7 @@ with tab3:
         ("U","#FFA15A","User (U)"),
         ("I","#636EFA","Intent (I)"),
         ("E","#19D3F3","Event (E)"),
-        ("M","#00CC96","Metric (M)"),
+        ("M","#00CC96","Observed Metrics (M)"),
         ("C","#EF553B","Cognitive (C)"),
         ("A","#AB63FA","Action (A)"),
     ]):
