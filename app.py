@@ -66,7 +66,7 @@ def load_data(gate_threshold: float) -> tuple[pd.DataFrame, dict]:
 # ══════════════════════════════════════════════════════════════════════════════
 st.sidebar.title("⚙️ Parameters")
 threshold = st.sidebar.slider(
-    "Semantic Gate Threshold (θₛ)", 0.30, 0.90, 0.60, 0.05,
+    "Semantic Gate Threshold (θₛ)", 0.30, 0.90, 0.51, 0.05,
     help="ICM subgraph score must exceed this to allow adaptation"
 )
 
