@@ -394,7 +394,7 @@ with tab5:
             🏃 Fitness Performance Hub
         </div>
         <div style='color:#a8b2c1;font-size:13px'>
-            Synthetic Strava-format data · 12-week training block · KG semantic gate controls layout
+            Synthetic Strava-format data · 12-week training block · fitness-domain scenario
         </div>
     </div>
     """, unsafe_allow_html=True)
