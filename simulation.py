@@ -58,7 +58,7 @@ class KnowledgeGraphSimulator:
     Gate threshold GATE_DEFAULT=0.51 yields ~59% gate open rate → ~41% UVI reduction.
     """
 
-    def __init__(self, rng: np.random.Generator, gate_threshold: float = 0.60):
+    def __init__(self, rng: np.random.Generator, gate_threshold: float = 0.51):
         self.rng            = rng
         self.gate_threshold = gate_threshold
         self.G              = nx.DiGraph()
