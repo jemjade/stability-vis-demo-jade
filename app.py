@@ -688,8 +688,8 @@ A score < θ means signals may reflect transient exploration → layout change s
 
 st.markdown("---")
 st.caption(
-    f"Evaluation uses entirely synthetic interaction sessions (N={N_SESSIONS}). "
-    "No real participants or personal data involved. "
-    "Human-subject validation is planned as future work. "
-    "HCII 2026 · Suhyun Park · Korea University"
+    f"This demo is based entirely on synthetic interaction sessions (N={N_SESSIONS}). "
+    "No real participants or personal data were involved. "
+    "Human-subject evaluation is planned as future work. "
+    "HCII 2026 · Suhyun Park · Graduate School of SW and AI Convergence, Korea University"
 )
