@@ -102,7 +102,7 @@ st.title("🧠 Stability-Aware Adaptive Visualization Framework")
 
 st.markdown(
     f"**HCII 2026 Poster Demo** · Suhyun Park · Graduate School of SW and AI Convergence, Korea University  \n"
-    f"Synthetic sessions: **N = {N_SESSIONS}** · Seed: {SEED} · Preliminary ML consistency: **~94%**"
+    f"Synthetic sessions: **N = {N_SESSIONS}** · Seed: {SEED} · Preliminary ML consistency: **>90%**"
 )
 st.markdown("---")
 
@@ -140,7 +140,8 @@ with tab1:
         st.metric("Comprehension · Stability-Aware", f"{comp_vals[2]:.2f}", delta_comp)
     with c3:
         gate_row = summ[summ.ui_type == "stability_aware_adaptive"].iloc[0]
-        st.metric("Gate Open Rate", f"{gate_row.gate_open_rate * 100:.1f}%")
+        st.metric("Gate Open Rate", f"{gate_row.gate_open_rate * 100:.1f}%",
+                  help="Among high-load sessions that reached semantic evaluation")
 
     col_a, col_b = st.columns(2)
     with col_a:
@@ -179,6 +180,7 @@ with tab1:
     st.plotly_chart(fig2, use_container_width=True)
 
     st.markdown("#### Gate Open Rate by Intent (Stability-Aware)")
+    st.caption("Rate computed among high-load sessions that reached semantic evaluation.")
     high_stab = df[(df["cognitive_load"] == "high") &
                    (df["ui_type"] == "stability_aware_adaptive")].copy()
     high_stab["gate_open"] = (high_stab["gate_reason"] == "ICM_semantic_justified").astype(int)

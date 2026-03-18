@@ -24,14 +24,14 @@ HIGH_LOAD_PROB = {
     "gradual_detailed":0.52,
 }
 
-SEED              = 6      # → LR Accuracy ≈ 94%
+SEED              = 6      # → ML accuracy exceeds 90%
 N_SESSIONS        = 480
 PER_GROUP         = N_SESSIONS // (len(INTENTS) * len(UIS))  # = 40
 INTENT_SHIFT_PROB = 0.18   # paper Section 7
 
 # Adaptation effect parameters — calibrated to match paper-reported outcomes:
 #   TCT ~24% improvement, Comp ~32% improvement, UVI reduction ~41%
-# Gate threshold 0.51 yields gate open rate ~59%, UVI reduction ~41%
+# Gate threshold 0.51 yields gate open rate ~59% (among high-load sessions reaching semantic evaluation), UVI reduction ~41%
 TCT_MULT    = 0.55   # per-session tct multiplier when gate opens
 COMP_DELTA  = 0.65   # per-session comprehension increment when gate opens
 GATE_DEFAULT = 0.51  # default semantic gate threshold (paper Section 8)
@@ -55,7 +55,8 @@ class KnowledgeGraphSimulator:
 
     Adaptation effect parameters (tct ×TCT_MULT=0.55, comp +COMP_DELTA=0.65) calibrated
     so aggregate outcomes match paper-reported ~24% TCT improvement and ~32% comp improvement.
-    Gate threshold GATE_DEFAULT=0.51 yields ~59% gate open rate → ~41% UVI reduction.
+    Gate threshold GATE_DEFAULT=0.51 yields ~59% gate open rate
+    (measured among high-load sessions that reached semantic evaluation) → ~41% UVI reduction.
     """
 
     def __init__(self, rng: np.random.Generator, gate_threshold: float = 0.51):
