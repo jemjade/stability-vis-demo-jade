@@ -307,11 +307,10 @@ with tab3:
 with tab4:
     st.subheader("📈 Stability–Performance Tradeoff (Threshold Sweep)")
     st.markdown(
-        "As θₛ increases, fewer sessions qualify for adaptation → more interface stability, "
-        "but potentially less task-time improvement. "
-        "The tradeoff model follows prior adaptive interface research: "
-        "gate-closed sessions revert to immediate-adaptive baseline performance "
-        "(Findlater & McGrenere, CHI 2004; Greenberg & Witten, BIT 1985)."
+        "As θₛ increases, fewer sessions qualify for adaptation, yielding greater interface stability "
+        "but potentially smaller task-time gains. In this simulation, gate-closed sessions revert to "
+        "the immediate-adaptive baseline, consistent with the stability--performance trade-off discussed "
+        "in prior adaptive interface research."
     )
 
     high_df = df[df["cognitive_load"] == "high"].copy()
